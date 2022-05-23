@@ -1,0 +1,6 @@
+#EXTM3U
+    #EXT-X-VERSION:3
+    #EXT-X-TARGETDURATION:7
+    #EXT-X-MEDIA-SEQUENCE:8779957
+    #EXTINF:6.006,
+    https://patient-morning-22ed.delivrjs.workers.dev
