@@ -20,24 +20,7 @@
 </head>
 
 <body>
-  <div id="jwplayer"></div>
-  <script>
-    function getQuery(query) {
-      var pReg = new RegExp(query + "\\=([^\\?&]+)", "i");
-      if (!pReg.test(window.location.href)) {
-        return '';
-      }
-      var pRes = pReg.exec(window['location']['href']);
-      return decodeURIComponent(pRes[1]);
-    }
-    jwplayer('jwplayer').setup({
-      file: getQuery('url'),
-      autostart: true,
-      width: '100%',
-      height: '100%',
-      type: 'application/x-mpegURL'
-    });
-  </script>
+  <a href="intent:https://content.jwplatform.com/manifests/yp34SRmf.m3u8#Intent;package=com.mxtech.videoplayer.ad;S.title=/0:/Multimedia/Video/4070618-1hd.mp4;end">Play</a>
 </body>
 
 </html>
