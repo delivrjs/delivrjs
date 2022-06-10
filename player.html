@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <script src="https://delivrjs.github.io/delivrjs/js/jwplayer.js"></script>
+  <script>jwplayer.key = "ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=";</script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      color: white;
+      overflow: hidden;
+      position: fixed;
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="jwplayer"></div>
+  <script>
+    function getQuery(query) {
+      var pReg = new RegExp(query + "\\=([^\\?&]+)", "i");
+      if (!pReg.test(window.location.href)) {
+        return '';
+      }
+      var pRes = pReg.exec(window['location']['href']);
+      return decodeURIComponent(pRes[1]);
+    }
+    jwplayer('jwplayer').setup({
+      file: getQuery('url'),
+      autostart: true,
+      width: '100%',
+      height: '100%',
+      type: 'application/x-mpegURL'
+    });
+  </script>
+</body>
+
+</html>
